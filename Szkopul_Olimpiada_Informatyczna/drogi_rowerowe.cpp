@@ -18,8 +18,8 @@ std::vector<int>    S[max_n];  // graf silnie spojnych skladowych
 int                 IN[max_n]; // in-degree w grafie S
 
 int s_itr = 0;          // ilosc silnie spojnych skladowych
-int ver_to_SSS[max_n];  // wiercholek a jego silnie spojna skladowa
-int SSS_size[max_n];    // silnie spojna skladowa a jej wiercholki
+int ver_to_SSS[max_n];  // wierzcholek a jego silnie spojna skladowa
+int SSS_size[max_n];    // rozmiar SSS
 
 int SSS_ans[max_n];     // odpowiedz dla SSS
 
