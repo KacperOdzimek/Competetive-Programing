@@ -7,6 +7,7 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
+                "-DLOCAL",
                 "${file}",
                 "-o",
                 "${fileDirname}/../Build/${fileBasenameNoExtension}"
