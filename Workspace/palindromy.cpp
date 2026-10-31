@@ -20,10 +20,38 @@
 */
 
 #include <bits/stdc++.h>
+constexpr int max_s = 2'000'000;
+
+// Trie
+struct node {
+    bool is_word;
+    int  child[26];
+};
+int  TI = 1;
+node T[max_s + 1];
+
+void laduj() {
+    std::ios_base::sync_with_stdio(0); std::cin.tie(0);
+    int n; std::cin >> n; for (int i = 0; i < n; i++) {
+        int l; std::cin >> l; std::string s; std::cin >> s;
+
+        // Wepchnij w trie
+        int t = 0; for (auto c : s) {
+            int child = T[t].child[c - 'a'];
+            if (!child) {
+                child = TI++;
+                T[t].child[c - 'a'] = child;
+                t = child;
+            }
+            t = child;
+        } T[t].is_word = true;
+
+        // Generuj hashe
+
+    }
+}
 
 int main() {
-    std::ios_base::sync_with_stdio(0); std::cin.tie(0);
-    int n; std::cin >> n;
-
-
+    laduj();
+    
 }
